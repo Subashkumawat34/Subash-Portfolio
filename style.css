@@ -567,131 +567,53 @@ span {
 
 .technologies {
   background: var(--second-bg-color);
-  color: black; /* Consider if this should be white or --text-color if bg is dark */
-  padding: 8rem 5% 8rem; /* Added some padding for better spacing */
+  color: black;
 }
-
 .technologies-box {
-  /* Removed flex properties as the wrapper grid handles layout */
-}
-
-/* Main heading for the section */
-.technologies h2.heading {
-  text-align: center; /* Center the heading */
-  font-size: 4.5rem; /* Adjust size as needed */
-  margin-bottom: 5rem; /* Reduced margin for better balance */
-  color: white; /* Keep white color */
-  /* Removed width: 100% as text-align handles centering */
-  /* Removed margin-top: 5px; padding on section handles top space */
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem; 
-}
-
-.tech-item {
+  background-size: cover;
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centers content vertically if cell is taller */
   align-items: center;
-  gap: 1.5rem; /* Increased gap between image and text */
-  text-align: center; /* Center text below image */
+  justify-content: center;
+  flex-direction: column;
 }
 
-.tech-item img {
-  width: 10rem; /* Slightly smaller base size, adjust as needed */
-  max-width: 100%; /* Ensure image doesn't overflow its container */
-  height: auto; /* Maintain aspect ratio */
+.technologies h2 {
+  margin-top: 5px;
+  margin-bottom: 10rem;
+  color: white;
+  width: 100%;
+}
+
+.technologies-box img {
+  width: 13rem;
   border-radius: 10%;
   border: 3px solid var(--main-color);
   box-shadow: 0 0 25px var(--main-color);
-  padding: 8px; 
+  padding: 10px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  background-color: #000000; 
 }
-
-.tech-item img:hover {
+.technologies-box img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 35px var(--main-color); /* Optional: enhance shadow on hover */
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 8rem;
+}
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-/* Style for the technology names (now h3) */
-.tech-item h3 {
-  /* Changed selector from h2 to h3 */
-  font-size: 2rem; /* Adjusted font size */
-  color: white; /* Explicitly set color */
-  font-weight: 600;
-  /* Removed display/justify-content as text-align on parent handles centering */
-}
-
-/* =================== Responsive adjustments =================== */
-
-/* Media Query for Tablets and Smaller Devices (e.g., < 992px) */
-@media (max-width: 991px) {
-  .wrapper {
-    /* Change to 3 columns for tablets */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-  }
-
-  .technologies h2.heading {
-    margin-bottom: 4rem;
-    font-size: 4rem;
-  }
-
-  .tech-item img {
-    width: 9rem; /* Slightly smaller image */
-  }
-  .tech-item h3 {
-    font-size: 1.8rem; /* Slightly smaller text */
-  }
-}
-
-/* Media Query for Mobile Devices (e.g., < 768px) */
-@media (max-width: 767px) {
-  .technologies {
-    padding: 6rem 5% 6rem; /* Adjust padding for mobile */
-  }
-
-  .wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem; 
-  }
-
-  .technologies h2.heading {
-    margin-bottom: 4rem;
-    font-size: 3.5rem; 
-  }
-
-  .tech-item img {
-    width: 10rem;
-      padding: 6px;
-  }
-
-  .tech-item h3 {
-    font-size: 1.7rem;
-  }
-}
-
-/* Optional: Media Query for Very Small Mobile Devices (e.g., < 480px) */
-@media (max-width: 479px) {
-  .wrapper {
-    gap: 2rem; /* Reduce gap further */
-  }
-  .tech-item img {
-    width: 8rem; /* Make images smaller for very narrow screens */
-  }
-  .tech-item h3 {
-    font-size: 1.6rem;
-  }
-  .technologies h2.heading {
-    font-size: 3rem;
-  }
-}
-
+.tech-item h2 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}    
 /* //================ Contact Section CSS =================== */
 .contact {
   background-color: var(--bg-color);
