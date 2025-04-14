@@ -33,23 +33,6 @@ body {
   animation: matrixEntrance 1.5s ease-out forwards;
 }
 
-.sk-logo::before,
-.sk-logo::after {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  z-index: -1;
-  background: linear-gradient(
-    45deg,
-    #00ff88 0%,
-    #00ffff 25%,
-    #ff00ff 50%,
-    #ff0000 75%,
-    #00ff88 100%
-  );
-  background-size: 400%;
-  animation: hologramFlow 8s linear infinite;
-}
 
 .sk-logo::after {
   filter: blur(25px);
@@ -80,10 +63,6 @@ body {
   100% {
     background-position: 400% 0;
   }
-}
-
-.sk-logo:hover {
-  animation: glitchEffect 0.8s infinite;
 }
 
 @keyframes glitchEffect {
@@ -132,7 +111,7 @@ body {
   --bg-color: #2c2727; /* Dark Charcoal (for a modern, sleek background) */
   --second-bg-color: #362d2d; /* Slightly lighter charcoal for contrast */
   --text-color: #ffffff; /* Pure White (for readability) */
-  --main-color: #2753cc; /* Warm Orange (for a friendly and inviting vibe) */
+  --main-color: cyan; /* Warm Orange (for a friendly and inviting vibe) */
   --headings-color: rgb(41, 38, 38); /* BackGround color for all headings  */
 }
 
