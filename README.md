@@ -53,7 +53,7 @@ I’m a dedicated Computer Science student currently at Arya College Of Engineer
 - **LinkedIn:** [Subhash Kumawat](https://www.linkedin.com/in/subhash-kumawat-192b46292/)
 - **GitHub:** [Subashkumawat34](https://github.com/Subashkumawat34)
 - **Twitter(X):** [@Kumawat6848](https://x.com/Kumawat6848?t=crRxCDOw7Pf7UphWXSPX0A&s=09)
-- **Email:** (subashkumawat34@gmail.com)
+- **Email:** subashkumawat34@gmail.com
 
 ---
 
