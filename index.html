@@ -1,467 +1,851 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Subhash Kumawat</title>
-    <!-- Favicon -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <link rel="icon" type="image/x-icon" href="./images/sklogo.jpg" />
-    <script
-      src="https://kit.fontawesome.com/ffe8c3f3d7.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Scroll Reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Subhash Kumawat - Aspiring MERN Stack Developer specializing in MongoDB, Express.js, React, and Node.js. Building dynamic web applications with modern technologies." />
+  <meta name="keywords"
+    content="MERN Stack Developer, Web Developer, React Developer, Node.js, MongoDB, Portfolio, Subhash Kumawat" />
+  <meta name="author" content="Subhash Kumawat" />
+  <meta name="theme-color" content="#667eea" />
 
-    <!-- Typed.js  -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Subhash Kumawat - MERN Stack Developer" />
+  <meta property="og:description"
+    content="Aspiring MERN stack developer with strong foundational skills in MongoDB, JavaScript, and React. Passionate about building dynamic web applications." />
+  <meta property="og:image" content="./images/subash.jpg" />
 
-    
-  </head>
-  <body>
-    <!------------------------- Header Section -------------------------------->
-    <header class="header">
-      <div class="sk-logo-div">
-        
-        <a href="#home" class="logo">Subhash <span>Kumawat</span></a>
-      </div>
-      <i class="bx bx-menu" id="menu-icon"></i>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Subhash Kumawat - MERN Stack Developer" />
+  <meta name="twitter:description"
+    content="Aspiring MERN stack developer passionate about building dynamic web applications." />
+  <meta name="twitter:image" content="./images/subash.jpg" />
 
-      <nav class="navbar" id="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#technologies">Technologies</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <title>Subhash Kumawat - MERN Stack Developer | Portfolio</title>
 
-    <!------------------------ Home Section ----------------------------------->
-    <section class="home" id="home" id="background">
-      <div class="home-content left-side">
-        <h1>Hey, It's <span>Subhash</span></h1>
-        <h3 class="text-animation">I'm a <span></span></h3>
-        <p>
-          Aspiring MERN stack developer with strong foundational skills in
-          MongoDB, javascript, and React . Passionate about building dynamic web
-          applications and eager to grow in a professional environment.
-        </p>
-        <div class="social-icons">
-          <a
-            href="https://www.linkedin.com/in/subhash-kumawat-192b46292/"
-            target="_blank"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a
-            href="https://x.com/Kumawat6848?t=crRxCDOw7Pf7UphWXSPX0A&s=09"
-            target="_blank"
-            ><i class="bx bxl-twitter"></i
-          ></a>
-          <a href="https://github.com/Subashkumawat34/" target="_blank"
-            ><i class="bx bxl-github"></i
-          ></a>
-        </div>
-        <div class="btn-group">
-          <a href="/images/resume.pdf" target="_blank" download class="btn"
-            >Resume</a
-          >
-          <a href="#contact" class="btn">Contact</a>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./images/sklogo.jpg" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/ffe8c3f3d7.js" crossorigin="anonymous"></script>
+
+  <!-- Toast Notifications -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <!-- Three.js for 3D elements -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+  <!--============== Loading Screen ==============-->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <!-- Animated Spinner -->
+      <div class="loader-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="loader-logo-center">
+          <span class="logo-initials">SK</span>
         </div>
       </div>
-      <div class="home-img right-side">
-        <img
-          src="/images//subash.jpg"
-          alt="Avatar.jpg"
-          width="150px"
-          height="350px"
-        />
-      </div>
-    </section>
 
-    <!---------------------- Education Section --------------------------------->
-    <section class="education" id="education" id="background">
-      <h2 class="heading top-side">Education & Work Experience</h2>
-      <div class="timeline-items">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2019 - 2020</div>
-          <div class="timeline-content left-side">
-            <h3>
-              <span>Xth</span>, Board Of Secondary Education, Rajasthan (Nagaur)
-            </h3>
-            <p>
-              I completed my matriculation in 2020 with a score of 60.50%. I am
-              interested in exploring Science and Mathematics subjects.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2021 - 2022</div>
-          <div class="timeline-content right-side">
-            <h3>
-              <span>XIIth(Science)</span>, Board Of Secondary Education,
-              Rajasthan (Nagaur)
-            </h3>
-            <p>
-              I completed my higher secondary education in 2022 with a score of
-              71.80%. I achieved a 90% score in Chemistry.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Nov 2022 - Expected 2026</div>
-          <div class="timeline-content left-side">
-            <h3>
-              <span>Bachelor of Engineering (CSE)</span>, Arya College Of
-              Engineering & IT (Jaipur), Rajasthan
-            </h3>
-            <p>
-              My current CGPA is 8.67, reflecting my dedication and commitment
-              to academic excellence. Throughout my college curriculum, I have
-              honed my skills in Object Oriented Programming (OOP), Data
-              Structures and Algorithms, DBMS, Computer Networking, and Software
-              Engineering, positioning me for impactful contributions in the
-              field.
-            </p>
-          </div>
-        </div>
-
-        <!-- <div class="timeline-item">
-            <div class="timeline-dot"></div>
-                <div class="timeline-date">May 2023 - July 2023</div>
-                <div class="timeline-content right-side">
-                    <h3><span>Frontend Developer Intern</span>, Omninos Technologies International Pvt. Ltd.</h3>
-                    <p>
-                        <ul class="bullets-points">
-                            <li>Developed a real-time chatting application using HTML, CSS, JavaScript, Node.js, and WebSocket, enhancing
-                                user engagement by 40% and reducing message latency by 50%.</li>
-                            <li>Designed a responsive interface, improving user
-                                satisfaction ratings by 35%.</li>
-                        </ul>
-                    </p>
-                </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-                <div class="timeline-date">Aug 2024 - Present</div>
-                <div class="timeline-content left-side">
-                    <h3><span>Full Stack Developer Intern</span>, The Assigner</h3>
-                    <p>
-                        <ul class="bullets-points">
-                            <li>Developed a fully responsive webpages for a key section of The Assigner, ensuring optimal user
-                                experience and functionality across all devices.</li>
-                            <li>Developed and implemented verification & authentication for both frontend and backend, and tested RESTful
-                                APIs.</li>
-                            <li>Collaborated with IT, design, SEO, and content teams, ensuring seamless coordination and project integration.</li>
-                        </ul>
-                    </p>
-                </div> 
-        </div> -->
-      </div>
-    </section>
-
-    <!--------------------- Projects Section (ToDo) ----------------------------------->
-    <section class="projects" id="projects">
-      <h2 class="heading top-side">Projects</h2>
-      <div class="projects-container">
-        <div class="project-box left-side portfolio-box">
-          <img src="./images/commute1.png" alt="" />
-          <div class="portfolio-layer">
-            <h4>Commute-Share App</h4>
-            <p>
-              🎉 Share Application UI crafted with HTML, Tailwind CSS, JavaScript & React.js.  Dynamic animations powered by Framer Motion & Aceternity UI 
-            </p>
-            <div class="external-links">
-              <a
-                href="https://github.com/Subashkumawat34/Commute-Share-App"
-                target="_blank"
-                ><i class="fa-solid fa-code"></i
-              ></a>
-              <!-- <a
-                href="https://nextjs-project-lt3b-9u1brc2m2-sanjhs-projects-9ddd6cb3.vercel.app/"
-                target="_blank"
-                ><i class="fa-solid fa-eye"></i -->
-              ></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-box right-side portfolio-box">
-          <img
-            src="./images/voting.png"
-            alt=""
-            width="150px"
-            height="170px"
-            alt=""
-          />
-          <div class="portfolio-layer">
-            <h4>Voting-Application</h4>
-            <p>
-              Welcome to the Voting App! 🎬🍿 Dive into the world of Voting with
-              our user-friendly web application🌟✨
-            </p>
-            <div class="external-links">
-              <a href="https://github.com/Subashkumawat34/Voting-Application" target="_blank"
-                ><i class="fa-solid fa-code"></i
-              ></a>
-              <!-- <a
-                href="https://movie-app-kappa-rouge.vercel.app/"
-                target="_blank"
-                ><i class="fa-solid fa-eye"></i
-              ></a> -->
-            </div>
-          </div>
-        </div>
-
-        <div class="project-box left-side portfolio-box">
-          <img
-            src="./images/imageenhancer.png"
-            alt=""
-            width="150px"
-            height="170px"
-            alt=""
-          />
-          <div class="portfolio-layer">
-            <h4>AI Image-Enhancer App</h4>
-            <p>
-              📸✨ This MERN-based application allows you to enhance, preview, and manage images online, integrating both client-side and server-side functionalities.
-            </p>
-            <div class="external-links">
-              <a
-                href="https://github.com/Subashkumawat34/AI-Image-Enhancer"
-                target="_blank"
-                ><i class="fa-solid fa-code"></i
-              ></a>
-              <!-- <a
-                href="https://book-store-frontend-ovcs4v6us-sanjhs-projects-9ddd6cb3.vercel.app/"
-                target="_blank"
-                ><i class="fa-solid fa-eye"></i 
-              ></a>-->
-            </div>
-          </div>
-        </div>
-
-        <div class="project-box right-side portfolio-box">
-          <img
-            src="./images/chatApplication.png"
-            alt=""
-            width="150px"
-            height="170px"
-            alt=""
-          />
-          <div class="portfolio-layer">
-            <h4>Simple-Chat Application</h4>
-            <p>
-              Built with Java — A Simple Chat Application Seamlessly connect and chat in real time with a clean, minimalist interface.
-              Fast, secure, and built for effortless communication! 💬⚡
-            </p>
-            <div class="external-links">
-              <a
-                href="https://github.com/Subashkumawat34/Chat-Application"
-                target="_blank"
-                ><i class="fa-solid fa-code"></i
-              ></a>
-              <!-- <a
-                href="https://image-search-engine-psi.vercel.app/"
-                target="_blank"
-                ><i class="fa-solid fa-eye"></i
-              ></a> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<!------------------------- Technologies Section --------------------------------->
-<section class="technologies" id="technologies">
-  <div class="technologies-box">
-    <h2 class="heading top-side">Technologies</h2>
-
-    <div class="wrapper">
-      <div class="tech-item bottom-side">
-        <img src="/images/html.jpg" width="200px" alt="html.jpg" />
-        <h2>HTML5</h2>
+      <!-- Percentage Counter -->
+      <div class="loader-percentage">
+        <span id="loader-count">0</span>%
       </div>
 
-      <div class="tech-item bottom-side">
-        <img src="/images/css.jpg" width="200px" alt="css.jpg" />
-        <h2>CSS3</h2>
-      </div>
-
-      <div class="tech-item bottom-side">
-        <img src="/images/javascript.jpg" width="200px" alt="js.jpg" />
-        <h2>JavaScript</h2>
-      </div>
-
-      <div class="tech-item bottom-side">
-        <img src="/images/react.jpg" width="200px" alt="react.jpg" />
-        <h2>React</h2>
-      </div>
-
-      <div class="tech-item bottom-side">
-        <img src="/images/tailwing.jpg" width="200px" alt="tailwind.jpg" />
-        <h2>TailwindCSS</h2>
-      </div>
-
-      <div class="tech-item bottom-side">
-        <img src="/images/nodejs.jpg" width="200px" alt="node.jpg" />
-        <h2>Nodejs</h2>
-      </div>
-
-      <div class="tech-item bottom-side">
-        <img src="/images/mongodb.jpg" width="200px" alt="mongoDB.jpg" />
-        <h2>MongoDB</h2>
-      </div>
-
-      <div class="tech-item bottom-side">
-        <img src="/images/mysql.jpg" width="200px" alt="sql.jpg" />
-        <h2>MySQL</h2>
-      </div>
-
-      <div class="tech-item bottom-side">
-        <img src="/images/github.jpg" width="200px" alt="git.jpg" />
-        <h2>Git/GitHub</h2>
-      </div>
-
-      <div class="tech-item bottom-side">
-        <img src="/images/clanguage.jpg" width="200px" alt="c++.jpg" />
-        <h2>C/C++</h2>
-      </div>
-
-      <div class="tech-item bottom-side">
-        <img src="/images/java.jpg" width="200px" alt="c++.jpg" />
-        <h2>Java</h2>
-      </div>
+      <!-- Loading Text -->
+      <p class="loader-text">Loading Portfolio...</p>
     </div>
   </div>
-</section>
-    <!--------------------- Contact Section -------------------------->
-    <section class="contact" id="contact">
-      <h2 class="heading top-side">Contact <span>Me</span></h2>
 
-      <form name="contact" novalidate>
-        <div class="input-group left-side">
-          <div class="input-box">
-            <input
-              type="text"
-              placeholder="Full Name"
-              id="fullName"
-              name="Fullname"
-              title="Please enter your full Name"
-              required
-            />
-            <input
-              type="email"
-              title="Please enter your valid email"
-              placeholder="Email"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-          <div class="input-box">
-            <input
-              type="text"
-              name="country_code"
-              title="Please enter exactly 10 digits"
-              placeholder="Phone Number"
-              maxlength="10"
-              id="phone"
-              name="phone"
-              required
-            />
-            <input
-              type="text"
-              placeholder="Subject"
-              id="subject"
-              name="subject"
-              required
-            />
-          </div>
+  <!-- Header Section -->
+  <header class="header" id="header">
+    <div class="sk-logo-div">
+      <a href="#home" class="logo" aria-label="Subhash Kumawat Home">Subhash <span>Kumawat</span></a>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+      <i class="bx bx-moon" id="theme-icon"></i>
+    </button>
+
+    <i class="bx bx-menu" id="menu-icon" aria-label="Toggle Menu"></i>
+
+    <nav class="navbar" id="navbar" role="navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#technologies">Technologies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <!-- 3D Background Canvas -->
+    <canvas id="three-canvas" class="three-canvas"></canvas>
+
+    <div class="home-content left-side">
+      <h1>Hey, It's <span>Subhash</span></h1>
+      <h3 class="text-animation">I'm a <span></span></h3>
+      <p>
+        Aspiring MERN stack developer with strong foundational skills in
+        MongoDB, JavaScript, and React. Passionate about building dynamic web
+        applications and eager to grow in a professional environment.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/subhash-kumawat-192b46292/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn Profile"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://x.com/Kumawat6848?t=crRxCDOw7Pf7UphWXSPX0A&s=09" target="_blank" rel="noopener noreferrer"
+          aria-label="Twitter Profile"><i class="bx bxl-twitter"></i></a>
+        <a href="https://github.com/Subashkumawat34/" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub Profile"><i class="bx bxl-github"></i></a>
+      </div>
+      <div class="btn-group">
+        <a href="./images/resume.pdf" target="_blank" download class="btn">Download Resume</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+    </div>
+    <div class="home-img right-side">
+      <img src="./images/subash.jpg" alt="Subhash Kumawat - MERN Stack Developer" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education" id="education">
+    <h2 class="heading top-side">Education & Work Experience</h2>
+    <div class="timeline-items">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2019 - 2020</div>
+        <div class="timeline-content left-side">
+          <h3>
+            <span>Xth</span>, Board Of Secondary Education, Rajasthan (Nagaur)
+          </h3>
+          <p>
+            I completed my matriculation in 2020 with a score of 60.50%. I am
+            interested in exploring Science and Mathematics subjects.
+          </p>
         </div>
-
-        <div class="input-group-2 right-side">
-          <textarea
-            cols="30"
-            rows="8"
-            placeholder="Your Message"
-            title="Please enter your message"
-            id="message"
-            name="message"
-            class="item"
-            required
-          ></textarea>
-          <button type="submit" value="Send Message" class="btn">
-            Send Message
-          </button>
-        </div>
-      </form>
-    </section>
-
-    <!---------------------- Footer Section ------------------------->
-    <footer class="footer">
-      <div class="social top-side">
-        <a
-          href="https://www.linkedin.com/in/subhash-kumawat-192b46292/"
-          target="_blank"
-          ><i class="bx bxl-linkedin"></i
-        ></a>
-        <a
-          href="https://x.com/Kumawat6848?t=crRxCDOw7Pf7UphWXSPX0A&s=09"
-          target="_blank"
-          ><i class="bx bxl-twitter"></i
-        ></a>
-        <a href="https://github.com/Subashkumawat34" target="_blank"
-          ><i class="bx bxl-github"></i
-        ></a>
       </div>
 
-      <ul class="list left-side">
-        <li>
-          <a href="#">About me</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-        <li>
-          <a href="#technologies">Technologies</a>
-        </li>
-      </ul>
-      <p class="copyright right-side">
-        © Subhash Kumawat | All Rights Reserved 2025
-      </p>
-    </footer>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2021 - 2022</div>
+        <div class="timeline-content right-side">
+          <h3>
+            <span>XIIth(Science)</span>, Board Of Secondary Education,
+            Rajasthan (Nagaur)
+          </h3>
+          <p>
+            I completed my higher secondary education in 2022 with a score of
+            71.80%. I achieved a 90% score in Chemistry.
+          </p>
+        </div>
+      </div>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
-    <script src="./script.js"></script>
-    Use code with caution.
-  </body>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Nov 2022 - Expected 2026</div>
+        <div class="timeline-content left-side">
+          <h3>
+            <span>Bachelor of Engineering (CSE)</span>, Arya College Of
+            Engineering & IT (Jaipur), Rajasthan
+          </h3>
+          <p>
+            My current CGPA is 8.67, reflecting my dedication and commitment
+            to academic excellence. Throughout my college curriculum, I have
+            honed my skills in Object Oriented Programming (OOP), Data
+            Structures and Algorithms, DBMS, Computer Networking, and Software
+            Engineering, positioning me for impactful contributions in the
+            field.
+          </p>
+        </div>
+      </div>
+      <!-- Experience Timeline Section -->
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Jun 2025 – July 2025 (Remote)</div>
+        <div class="timeline-content right-side">
+          <h3><span>Salesforce Programming Architect Intern</span>, TechForce Academy</h3>
+          <ul class="bullets-points">
+            <li>Designed and developed Salesforce applications using Apex, Visualforce, and Lightning Web Components
+              (LWC).</li>
+            <li>Built scalable solutions leveraging Visualforce pages, SOQL queries, and workflow rules to automate key
+              business processes.</li>
+            <li>Enhanced application efficiency and maintainability through optimized data access and modular
+              architecture.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">July 2024 – August 2024 (Remote)</div>
+        <div class="timeline-content left-side">
+          <h3><span>Salesforce Intern – Fundamentals of Salesforce</span>, TechForce Academy</h3>
+          <ul class="bullets-points">
+            <li>Developed an <strong>Event Management Application</strong> using Salesforce tools and declarative
+              features.</li>
+            <li>Worked with Lightning Components, Process Builder, and Data Modeling to design robust and user-friendly
+              workflows.</li>
+            <li>Gained hands-on experience in Salesforce CRM, enhancing data visibility and process automation for event
+              operations.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--------------------- Projects Section (ToDo) ----------------------------------->
+  <section class="projects" id="projects">
+    <h2 class="heading top-side">Projects</h2>
+    <div class="projects-container">
+      <!-- Project 1: Commute-Share App -->
+      <div class="project-box left-side portfolio-box">
+        <div class="portfolio-layer">
+          <div class="project-icon-header">
+            <div class="project-icon">
+              <i class="bx bx-code-alt"></i>
+            </div>
+            <h4>Commute-Share App</h4>
+          </div>
+          <p>
+            🎉 Share Application UI crafted with HTML, Tailwind CSS, JavaScript & React.js. Dynamic animations powered
+            by Framer Motion & Aceternity UI
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Tailwind CSS</span>
+            <span class="tech-badge">Framer Motion</span>
+          </div>
+          <div class="external-links">
+            <a href="https://github.com/Subashkumawat34/Commute-Share-App" target="_blank" title="View Code">
+              <i class="fa-solid fa-code"></i>
+              <span>Code</span>
+            </a>
+            <a href="https://commute-share-app.vercel.app/" target="_blank" title="Live Demo" class="demo-link">
+              <i class="bx bx-link-external"></i>
+              <span>Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Voting Application -->
+      <div class="project-box right-side portfolio-box">
+        <div class="portfolio-layer">
+          <div class="project-icon-header">
+            <div class="project-icon">
+              <i class="bx bx-vote"></i>
+            </div>
+            <h4>Voting-Application</h4>
+          </div>
+          <p>
+            Welcome to the Voting App! 🎬🍿 Dive into the world of Voting with
+            our user-friendly web application🌟✨
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">Express</span>
+          </div>
+          <div class="external-links">
+            <a href="https://github.com/Subashkumawat34/Voting-Application" target="_blank" title="View Code">
+              <i class="fa-solid fa-code"></i>
+              <span>Code</span>
+            </a>
+            <a href="https://voting-application-demo.onrender.com/" target="_blank" title="Live Demo" class="demo-link">
+              <i class="bx bx-link-external"></i>
+              <span>Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: AI Image-Enhancer -->
+      <div class="project-box left-side portfolio-box">
+        <div class="portfolio-layer">
+          <div class="project-icon-header">
+            <div class="project-icon">
+              <i class="bx bx-image-alt"></i>
+            </div>
+            <h4>AI Image-Enhancer App</h4>
+          </div>
+          <p>
+            📸✨ This MERN-based application allows you to enhance, preview, and manage images online, integrating both
+            client-side and server-side functionalities.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">MERN Stack</span>
+            <span class="tech-badge">AI/ML</span>
+            <span class="tech-badge">Image Processing</span>
+          </div>
+          <div class="external-links">
+            <a href="https://github.com/Subashkumawat34/AI-Image-Enhancer" target="_blank" title="View Code">
+              <i class="fa-solid fa-code"></i>
+              <span>Code</span>
+            </a>
+            <a href="https://ai-image-enhancer.vercel.app/" target="_blank" title="Live Demo" class="demo-link">
+              <i class="bx bx-link-external"></i>
+              <span>Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Chat Application -->
+      <div class="project-box right-side portfolio-box">
+        <div class="portfolio-layer">
+          <div class="project-icon-header">
+            <div class="project-icon">
+              <i class="bx bx-message-square-dots"></i>
+            </div>
+            <h4>Simple-Chat Application</h4>
+          </div>
+          <p>
+            Built with Java — A Simple Chat Application Seamlessly connect and chat in real time with a clean,
+            minimalist interface.
+            Fast, secure, and built for effortless communication! 💬⚡
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">Socket Programming</span>
+            <span class="tech-badge">Real-time</span>
+          </div>
+          <div class="external-links">
+            <a href="https://github.com/Subashkumawat34/Chat-Application" target="_blank" title="View Code">
+              <i class="fa-solid fa-code"></i>
+              <span>Code</span>
+            </a>
+            <a href="https://github.com/Subashkumawat34/Chat-Application" target="_blank" title="View Repository"
+              class="demo-link">
+              <i class="bx bx-link-external"></i>
+              <span>Repository</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Portfolio Website -->
+      <div class="project-box left-side portfolio-box">
+        <div class="portfolio-layer">
+          <div class="project-icon-header">
+            <div class="project-icon">
+              <i class="bx bx-user-circle"></i>
+            </div>
+            <h4>Portfolio Website</h4>
+          </div>
+          <p>
+            🌟 Modern portfolio website with dark/light theme, animated UI, skills visualization, testimonials carousel,
+            and premium design features.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+          <div class="external-links">
+            <a href="https://github.com/Subashkumawat34/Subash-Portfolio" target="_blank" title="View Code">
+              <i class="fa-solid fa-code"></i>
+              <span>Code</span>
+            </a>
+            <a href="https://subashkumawat34.github.io/Subash-Portfolio/" target="_blank" title="Live Demo"
+              class="demo-link">
+              <i class="bx bx-link-external"></i>
+              <span>Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: FarmChainX Platform -->
+      <div class="project-box right-side portfolio-box">
+        <div class="portfolio-layer">
+          <div class="project-icon-header">
+            <div class="project-icon">
+              <i class="bx bx-donation-heart"></i>
+            </div>
+            <h4>FarmChainX Platform</h4>
+          </div>
+          <p>
+            🌾 Full-stack blockchain-based supply chain management system for agricultural products with QR tracking,
+            multi-role dashboards & analytics.
+          </p>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Spring Boot</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+          <div class="external-links">
+            <a href="https://github.com/Subashkumawat34" target="_blank" title="View Code">
+              <i class="fa-solid fa-code"></i>
+              <span>Code</span>
+            </a>
+            <a href="https://farmchainx.onrender.com/" target="_blank" title="Live Demo" class="demo-link">
+              <i class="bx bx-link-external"></i>
+              <span>Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--------------------- Skills Section ---------------------------->
+  <section class="skills" id="skills">
+    <h2 class="heading top-side">Skills & <span>Expertise</span></h2>
+
+    <div class="skills-container">
+      <!-- Frontend Skills -->
+      <div class="skill-category left-side">
+        <h3 class="category-title">
+          <i class="bx bx-code-alt"></i> Frontend Development
+        </h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="90">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>React.js</h4>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="85">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>JavaScript</h4>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="88">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>HTML/CSS</h4>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="80">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>Tailwind CSS</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend Skills -->
+      <div class="skill-category right-side">
+        <h3 class="category-title">
+          <i class="bx bx-server"></i> Backend Development
+        </h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="85">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>Node.js</h4>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="82">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>Express.js</h4>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="80">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>MongoDB</h4>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="75">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>MySQL</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Others -->
+      <div class="skill-category left-side">
+        <h3 class="category-title">
+          <i class="bx bx-wrench"></i> Tools & Technologies
+        </h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="88">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>Git/GitHub</h4>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="78">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>Salesforce</h4>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="83">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>Java</h4>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-circle" data-percent="80">
+              <svg>
+                <circle cx="70" cy="70" r="60"></circle>
+                <circle cx="70" cy="70" r="60" class="progress-circle"></circle>
+              </svg>
+              <div class="skill-percentage">
+                <span class="percentage-value">0</span>%
+              </div>
+            </div>
+            <h4>C/C++</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!------------------------- Technologies Section --------------------------------->
+  <section class="technologies" id="technologies">
+    <div class="technologies-box">
+      <h2 class="heading top-side">Technologies</h2>
+
+      <div class="wrapper">
+        <div class="tech-item bottom-side">
+          <img src="/images/html.jpg" width="200px" alt="html.jpg" />
+          <h2>HTML5</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/css.jpg" width="200px" alt="css.jpg" />
+          <h2>CSS3</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/javascript.jpg" width="200px" alt="js.jpg" />
+          <h2>JavaScript</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/react.jpg" width="200px" alt="react.jpg" />
+          <h2>React</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/tailwing.jpg" width="200px" alt="tailwind.jpg" />
+          <h2>TailwindCSS</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/nodejs.jpg" width="200px" alt="node.jpg" />
+          <h2>Nodejs</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/mongodb.jpg" width="200px" alt="mongoDB.jpg" />
+          <h2>MongoDB</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/mysql.jpg" width="200px" alt="sql.jpg" />
+          <h2>MySQL</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/github.jpg" width="200px" alt="git.jpg" />
+          <h2>Git/GitHub</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/clanguage.jpg" width="200px" alt="c++.jpg" />
+          <h2>C/C++</h2>
+        </div>
+
+        <div class="tech-item bottom-side">
+          <img src="/images/java.jpg" width="200px" alt="c++.jpg" />
+          <h2>Java</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--------------------- Testimonials Section ---------------------------->
+  <section class="testimonials" id="testimonials">
+    <h2 class="heading top-side">What People <span>Say</span></h2>
+
+    <div class="testimonials-container">
+      <div class="testimonial-slider">
+        <div class="testimonial-track">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card active">
+            <div class="quote-icon">
+              <i class="bx bxs-quote-alt-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "Working with Subhash was an absolute pleasure. His technical expertise in MERN stack development and
+              attention to detail resulted in a fantastic web application. Highly recommended!"
+            </p>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="./images/avatar1.png" alt="Client Avatar"
+                  onerror="this.src='https://ui-avatars.com/api/?name=Sarah+Johnson&background=667eea&color=fff&size=80'">
+              </div>
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <p>Product Manager, TechCorp</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <i class="bx bxs-quote-alt-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "Exceptional problem-solving skills and clean code architecture. Subhash delivered our Salesforce
+              integration project ahead of schedule with excellent documentation."
+            </p>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="./images/avatar2.png" alt="Client Avatar"
+                  onerror="this.src='https://ui-avatars.com/api/?name=Michael+Chen&background=f093fb&color=fff&size=80'">
+              </div>
+              <div class="author-info">
+                <h4>Michael Chen</h4>
+                <p>CTO, StartupHub</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <i class="bx bxs-quote-alt-left"></i>
+            </div>
+            <p class="testimonial-text">
+              "A talented developer with great communication skills. The React application he built exceeded our
+              expectations in both functionality and user experience."
+            </p>
+            <div class="rating">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="./images/avatar3.png" alt="Client Avatar"
+                  onerror="this.src='https://ui-avatars.com/api/?name=Emma+Williams&background=00f2fe&color=fff&size=80'">
+              </div>
+              <div class="author-info">
+                <h4>Emma Williams</h4>
+                <p>Founder, DesignStudio Pro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Controls -->
+      <div class="testimonial-navigation">
+        <button class="testimonial-arrow prev" aria-label="Previous testimonial">
+          <i class="bx bx-chevron-left"></i>
+        </button>
+        <div class="testimonial-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+        <button class="testimonial-arrow next" aria-label="Next testimonial">
+          <i class="bx bx-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!--------------------- Contact Section -------------------------->
+  <section class="contact" id="contact">
+    <h2 class="heading top-side">Contact <span>Me</span></h2>
+
+    <form name="contact" novalidate>
+      <div class="input-group left-side">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" id="fullName" name="Fullname" title="Please enter your full Name"
+            required />
+          <input type="email" title="Please enter your valid email" placeholder="Email" id="email" name="email"
+            required />
+        </div>
+        <div class="input-box">
+          <input type="text" name="country_code" title="Please enter exactly 10 digits" placeholder="Phone Number"
+            maxlength="10" id="phone" name="phone" required />
+          <input type="text" placeholder="Subject" id="subject" name="subject" required />
+        </div>
+      </div>
+
+      <div class="input-group-2 right-side">
+        <textarea cols="30" rows="8" placeholder="Your Message" title="Please enter your message" id="message"
+          name="message" class="item" required></textarea>
+        <button type="submit" value="Send Message" class="btn">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!---------------------- Footer Section ------------------------->
+  <footer class="footer">
+    <div class="social top-side">
+      <a href="https://www.linkedin.com/in/subhash-kumawat-192b46292/" target="_blank"><i
+          class="bx bxl-linkedin"></i></a>
+      <a href="https://x.com/Kumawat6848?t=crRxCDOw7Pf7UphWXSPX0A&s=09" target="_blank"><i
+          class="bx bxl-twitter"></i></a>
+      <a href="https://github.com/Subashkumawat34" target="_blank"><i class="bx bxl-github"></i></a>
+    </div>
+
+    <ul class="list left-side">
+      <li>
+        <a href="#">About me</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+      <li>
+        <a href="#technologies">Technologies</a>
+      </li>
+    </ul>
+    <p class="copyright right-side">
+      © Subhash Kumawat | All Rights Reserved 2025
+    </p>
+  </footer>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./js/loader.js"></script>
+  <script src="./js/skills-animation.js"></script>
+  <script src="./js/testimonials.js"></script>
+  <script src="./js/cursor.js"></script>
+  <script src="./js/three-scene.js"></script>
+  <script src="./js/theme.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
